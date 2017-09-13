@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-12">
+                <h1>Weather App</h1>
+                <br>
+                <form id="weather_form" action="#">
+                    <input type=text class="get-city input-lg" placeholder="Enter City" />
+                    <button type="submit" class="btn btn-primary btn-lg">Get Temp</button>
+               
+                </form>
+                <hr>
+                <div class="results">
+                </div>
+            </div>
+        </div>
+
+
+        <script id="weather-template" type="text/x-handlebars-template">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="result">
+                        <blockquote>
+                            <div class="name text-uppercase">{{name}} <i class="fa fa-trash pull-right" aria-hidden="true"></i></div>
+                            <strong><p>{{C}}°C/{{F}}°F </strong> at {{time}} on {{date}}</p>
+                            <div class="comment-HTML">
+                            </div>
+                            <form id="comment_form" action="">
+                                <input type=text class="comment" placeholder="Comment about the weather in" {{name}} />
+                                <input type=submit class="comment-btn btn-success" value="Comment" />
+                            </form>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </script>
+
+
+
+
+
+    <script src="jquery/dist/jquery.js">
+
+    </script>
+
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="handlebars/dist/handlebars.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
