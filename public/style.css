@@ -1,7 +1,15 @@
-.comment{
-    width: 100%,
-}
-
 .fa-trash{
     color : red;
+}
+
+.fa-cloud {
+    color : grey;
+}
+
+.result{
+    color : #00BCFF;
+    /* background-size: 700px 800px; */
+    background-size : cover;
+    
+
 }

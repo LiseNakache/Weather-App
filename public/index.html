@@ -13,55 +13,64 @@
 
 <body>
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row">
             <div class="col-md-12">
                 <h1>Weather App</h1>
                 <br>
-                <form id="weather_form" action="#">
-                    <input type=text class="get-city input-lg" placeholder="Enter City" />
-                    <button type="submit" class="btn btn-primary btn-lg">Get Temp</button>
-               
+                <form id="weather_form" class="input-group">
+                    <input type=text class="form-control get-city input-lg" placeholder="Enter City" />
+                    <span class="input-group-btn">
+                    <button type="submit" class="btn btn-primary btn-lg ">Get Temp</button>
+                </span>
                 </form>
                 <hr>
-                <div class="results">
-                </div>
             </div>
         </div>
 
 
+
+        <div class="results">
+        </div>
+
         <script id="weather-template" type="text/x-handlebars-template">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="result">
+            <div class="row infos">
+                <div class="col-md-12">
+                    <div class="result ">
                         <blockquote>
-                            <div class="name text-uppercase">{{name}} <i class="fa fa-trash pull-right" aria-hidden="true"></i></div>
-                            <strong><p>{{C}}°C/{{F}}°F </strong> at {{time}} on {{date}}</p>
-                            <div class="comment-HTML">
-                            </div>
-                            <form id="comment_form" action="">
-                                <input type=text class="comment" placeholder="Comment about the weather in" {{name}} />
-                                <input type=submit class="comment-btn btn-success" value="Comment" />
-                            </form>
+                                <div class="name text-uppercase">{{name}} <i class="fa fa-trash pull-right" aria-hidden="true"></i></div>
+                                <strong><span>{{C}}°C/{{F}}°F </strong> at {{time}} on {{date}}</span> <br>
+                                <hr>
+                                <span class="type-weather"><div class="weather-img"></div><em>{{typeOfWeather}}</em></span>
+                                <div class="comment-HTML">
+                                    <ul class="list-comments">
+                                    </ul>
+                                </div>
+                                <form id="comment_form" class="form-horizontal input-group ">
+                                    <input type=text class="form-control comment " placeholder="Comment about the weather in {{name}}" />
+                                    <span class="input-group-btn">
+                                <button class="comment-btn btn btn-success">Comment</button>
+                            </span>
+                                </form>
                         </blockquote>
+                        </div>
                     </div>
                 </div>
-            </div>
-    </div>
-    </script>
+        </script>
+        </div>
 
 
 
 
 
-    <script src="jquery/dist/jquery.js">
+        <script src="jquery/dist/jquery.js">
 
-    </script>
+        </script>
 
-    <script src="bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bootstrap/dist/js/bootstrap.js"></script>
 
-    <script src="handlebars/dist/handlebars.js"></script>
+        <script src="handlebars/dist/handlebars.js"></script>
 
-    <script src="main.js"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>
